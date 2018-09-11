@@ -3,7 +3,7 @@
 " Plugin:      clipbored.vim
 " Description: clipboard mappings the way I like them
 " Version:     1.0
-" Last Change: 2015-07-02
+" Last Change: 2018-09-11
 " Maintainer:  Philipp Millar <philipp.millar@poxar.de>
 "
 
@@ -12,7 +12,7 @@ if exists('loaded_clipbored')
 endif
 let loaded_clipbored = 1
 
-if has('win32')
+if has('win32') || match(system('uname'), 'Darwin') > -1
   set clipboard=unnamed
 else
   set clipboard=unnamedplus
